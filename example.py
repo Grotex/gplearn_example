@@ -26,6 +26,8 @@ if __name__ == '__main__':
 
     est_gp.fit(X_train, Y_train)
     print(est_gp)
+	with open('result.txt', 'w') as f：
+	    f.write(est_gp)
 
     score_train = est_gp.score(X_train, Y_train)
     score_test = est_gp.score(X_test, Y_test)
